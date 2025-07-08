@@ -32,5 +32,10 @@ func main() {
 	`
 	fmt.Printf("str1: %T %s \n", str1, str1)
 	fmt.Printf("s2: %T %s \n", s2, s2)
+	// byte和rune
+	var b3 byte = 'A' // byte是uint8的别名
+	var r rune = '中'  // rune是int32的别名
+	fmt.Printf("b3: %T %c \n", b3, b3)
+	fmt.Printf("r: %T %c \n", r, r)
 
 }
