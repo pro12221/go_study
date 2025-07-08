@@ -23,4 +23,14 @@ func main() {
 	var b2 bool
 	fmt.Printf("b1: %T \n", b1)
 	fmt.Printf("b2: %T %v \n", b2, b2)
+
+	// 字符串类型
+	var str1 string = "Hello, World!"
+	s2 := `
+	这是一个多行字符串
+	可以包含换行符和制表符
+	`
+	fmt.Printf("str1: %T %s \n", str1, str1)
+	fmt.Printf("s2: %T %s \n", s2, s2)
+
 }
