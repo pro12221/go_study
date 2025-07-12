@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"reflect"
+	"strconv"
 	"strings"
 )
 
@@ -72,4 +73,30 @@ func main() {
 	for i, r := range my777 {
 		fmt.Printf("字符 %d: %c \n", i, r)
 	}
+
+	//转 string
+	// 数值类型转 string 使用strconv
+	my888 := 123
+	str888 := strconv.Itoa(my888) // 将整数转换为字符串
+	fmt.Printf("整数转字符串: %s,%T	 \n", str888, str888)
+
+	//浮点转换为 string
+	my999 := 3.14
+	str999 := strconv.FormatFloat(my999, 'f', -1, 64) // 科学计数法，-1表示自动精度
+	fmt.Printf("浮点数转字符串: %s,%T \n", str999, str999)
+
+	// 布尔类型转 string
+	my1010 := strconv.FormatBool(true) // 将布尔值转换为字符串
+	fmt.Printf("布尔值转字符串: %s,%T \n", my1010, my1010)
+
+	// string 转 int
+	//strconv.Atoi() 是将字符串转换为十进制整数的最常用和最简洁的方法。
+	my1111 := "12345"
+	int111, err := strconv.Atoi(my1111) // 将字符串转换为整数
+	if err != nil {
+		fmt.Println("转换错误:", err)
+	} else {
+		fmt.Printf("字符串转整数: %d,%T \n", int111, int111)
+	}
+
 }
